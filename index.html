@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>متحف الفن الرقمي — الرئيسية</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- المشروع CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meta للصور والمعاينة -->
+    <meta property="og:title" content="متحف الفن الرقمي — الرئيسية" />
+    <meta property="og:description" content="تجربة فنية رقمية — مختارات من المعرض" />
+    <meta property="og:image" content="https://username.github.io/project-name/images/home/home1.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://username.github.io/project-name/" />
+
+    <!-- لمعاينة تويتر -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="متحف الفن الرقمي — الرئيسية" />
+    <meta name="twitter:description" content="تجربة فنية رقمية — مختارات من المعرض" />
+    <meta name="twitter:image" content="https://username.github.io/project-name/images/home/home1.jpg" />
+</head>
+
+
+<body>
+
+    <!-- اختيار اللغة (overlay) -->
+    <div id="language-choice" class="overlay">
+        <h2>اختر اللغة / Choose language</h2>
+        <div class="lang-buttons mt-3">
+            <button class="btn btn-light me-2" onclick="setLanguage('ar')">العربية</button>
+            <button class="btn btn-light" onclick="setLanguage('en')">English</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-museum me-2"></i>المتحف الرقمي</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> تسجيل دخول</a></li>
+                    <li class="nav-item"><a class="btn btn-accent nav-link text-white ms-2" href="register.html"><i class="fa-solid fa-user-plus"></i> إنشاء حساب</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero d-flex align-items-center text-center text-white">
+        <div class="container">
+            <h1 id="main-title" class="hero-title">مرحبا بكم في متحف الفن الرقمي العالمي</h1>
+            <p class="lead hero-sub text-muted">تجربة فنية رقمية — مختارات من المعرض</p>
+            <div class="mt-4">
+                <a href="gallery.html" class="btn btn-lg btn-accent me-2">تصفح المعرض</a>
+                <a href="contact.html" class="btn btn-lg btn-outline-light">تواصل معنا</a>
+            </div>
+            <!-- أزرار فتح Modals -->
+            <div class="mt-3">
+                <button id="openModal1" class="btn btn-primary me-2">فتح النافذة 1</button>
+                <button id="openModal2" class="btn btn-secondary">فتح النافذة 2</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- معرض مختار — 4 صور -->
+    <main class="container py-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="gallery-card art-card">
+                    <img src="images/home/home1.jpg" class="img-fluid" onclick="openImageModal(this.src)" alt="Artwork home 1">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="gallery-card art-card">
+                    <img src="images/home/home2.jpg" class="img-fluid" onclick="openImageModal(this.src)" alt="Artwork home 2">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="gallery-card art-card">
+                    <img src="images/home/home3.jpg" class="img-fluid" onclick="openImageModal(this.src)" alt="Artwork home 3">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="gallery-card art-card">
+                    <img src="images/home/home4.jpg" class="img-fluid" onclick="openImageModal(this.src)" alt="Artwork home 4">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="gallery.html" class="btn btn-outline-light">عرض كامل المعرض (20 عمل)</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-muted py-4">
+        <div class="container">
+            <p class="mb-1">📧 ibrahim@gmail.com &nbsp; | &nbsp; ☎️ 777888999</p>
+            <small>© 2025 المتحف الرقمي — جميع الحقوق محفوظة</small>
+        </div>
+    </footer>
+
+    <!-- Toast container -->
+    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index:2100;"></div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="ajaxModal1" tabindex="-1" aria-labelledby="ajaxModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ajaxModal1Label">نافذة 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body" id="ajaxModal1Content"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ajaxModal2" tabindex="-1" aria-labelledby="ajaxModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ajaxModal2Label">نافذة 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body" id="ajaxModal2Content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal لعرض الصور -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body p-0">
+                    <img id="modal-image" src="" class="img-fluid w-100 rounded" alt="Artwork">
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

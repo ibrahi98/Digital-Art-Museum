@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>تواصل معنا — متحف الفن الرقمي</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* كل الحقول داكنة وفخمة */
+        
+        .contact-card input,
+        .contact-card textarea {
+            background-color: #0f0f10;
+            color: #fff;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 1rem;
+        }
+        
+        .contact-card input::placeholder,
+        .contact-card textarea::placeholder {
+            color: #bdbdbd;
+        }
+        /* أيقونات وأرقام بخط أكبر وفخم */
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        
+        .contact-info i {
+            color: var(--accent);
+            margin-left: 8px;
+        }
+        /* أيقونات تواصل اجتماعي */
+        
+        .social-icons i {
+            font-size: 1.4rem;
+            margin-right: 12px;
+            color: var(--accent);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .social-icons i:hover {
+            color: var(--accent-dark);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">المتحف الرقمي</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenuC"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navMenuC">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">تواصل معنا</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="login.html">تسجيل دخول</a></li>
+                    <li class="nav-item"><a class="btn btn-accent nav-link text-white ms-2" href="register.html">إنشاء حساب</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center text-white py-5">
+        <div class="container">
+            <h2 class="fw-bold">تواصل معنا</h2>
+            <p class="text-muted">نرحب برسائلك واستفساراتك</p>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-5">
+                <div class="card p-4 shadow-sm bg-dark border-0 contact-card">
+                    <h5 class="mb-3 text-white">أرسل رسالة</h5>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label text-muted">الاسم</label>
+                            <input id="contact-name" class="form-control" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted">البريد الإلكتروني</label>
+                            <input id="contact-email" type="email" class="form-control" placeholder="example@domain.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-muted">الرسالة</label>
+                            <textarea id="contact-message" class="form-control" rows="6" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-accent" type="submit">إرسال الرسالة</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mt-4 contact-info text-white">
+                    <p><i class="fa-solid fa-envelope"></i> ibrahim@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 777888999</p>
+                    <div class="social-icons mt-2">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-center text-muted py-4 mt-5">© 2025 المتحف الرقمي</footer>
+
+    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index:2100;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

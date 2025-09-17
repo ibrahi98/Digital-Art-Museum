@@ -1,0 +1,125 @@
+:root {
+    --bg: #070708;
+    --panel: #0f0f10;
+    --muted: #bdbdbd;
+    --accent: #00bfa5;
+    --accent-dark: #018b77;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #050505, #0b0b0c);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+    letter-spacing: 0.2px;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent);
+}
+
+
+/* Accent button */
+
+.btn-accent {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.btn-accent:hover {
+    filter: brightness(1.03);
+}
+
+
+/* Gallery Card */
+
+.gallery-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--panel);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65);
+    transition: transform .45s cubic-bezier(.2, .9, .3, 1), box-shadow .45s;
+    width: 100%;
+    max-width: 1200px;
+    /* كبير جدا على اللابتوب */
+    height: auto;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-14px) scale(1.01);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.75);
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+
+footer p,
+footer small {
+    color: #00bfa5;
+    /* لون واضح للرقم والاسم */
+    font-size: 1.2rem;
+    /* أكبر قليلاً */
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .gallery-card {
+        max-width: 90vw;
+        /* ملء تقريبا كل الشاشة */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .gallery-card {
+        max-width: 80vw;
+    }
+}
+
+@media (min-width: 1025px) {
+    .gallery-card {
+        max-width: 1200px;
+        /* كبير جداً على اللابتوب */
+    }
+}
